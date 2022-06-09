@@ -8,7 +8,7 @@ namespace DBDesign
     {
         public static void TestQuery()
         {
-            DBdesignEF ef = new DBdesignEF();
+            DBDesignEF ef = new DBDesignEF();
 
             foreach (User user in ef.Users)
             {

@@ -4,7 +4,7 @@ using DBDesign.Model;
 namespace DBDesign
 {
 
-    public class DBdesignEF : DbContext
+    public class DBDesignEF : DbContext
     {
         public DbSet<User>? Users { get; set; }
         public DbSet<Friend>? Friends { get; set; }

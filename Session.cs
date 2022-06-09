@@ -11,7 +11,7 @@ namespace DBDesign
     {
         int UserID;
         Socket sClient;
-        DBdesignEF entitys;
+        DBDesignEF entitys;
         async Task<int> Response(int sessionId, string data)
         {
             Response response = new Response();
@@ -124,7 +124,7 @@ namespace DBDesign
             sClient.Close();
         }
 
-        public Session(Socket socket, DBdesignEF ef)
+        public Session(Socket socket, DBDesignEF ef)
         {
             this.sClient = socket;
             this.entitys = ef;
