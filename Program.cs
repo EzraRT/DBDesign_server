@@ -16,14 +16,12 @@ namespace DBDesign // Note: actual namespace depends on the project name.
 
         async static Task MainLoop()
         {
-            DBDesignEF ef = new DBDesignEF();
-
             TcpListener listener = new TcpListener(IPAddress.Any, 9090);
             listener.Start();
             while (true)
             {
                 Socket client = await listener.AcceptSocketAsync();
-                Session session = new Session(client, ef);
+                Session session = new Session(client);
 
                 Console.WriteLine(client.RemoteEndPoint + " connected.");
                 session.Start();

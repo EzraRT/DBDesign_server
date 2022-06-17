@@ -6,11 +6,11 @@ namespace DBDesign
 
     public class DBDesignEF : DbContext
     {
-        public DbSet<User>? Users { get; set; }
-        public DbSet<Friend>? Friends { get; set; }
-        public DbSet<UserMessage>? UserMessages { get; set; }
-        public DbSet<Group>? Groups { get; set; }
-        public DbSet<UserGroup>? UserGroups { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<UserMessage> UserMessages { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<UserGroup> UserGroups { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             const string _connectionString = "Your connection string here";
